@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+        #outer-box {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            position: relative;
+            overflow: hidden;
+        }
+
+        #inner-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            background-color: blue;
+            transition: transform 0.5s ease; /* Transition effect */
+        }
+
+        .animate {
+            transform: scale(1.1); /* Apply scale transformation */
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div id="outer-box">
+        <div id="inner-image"></div>
+    </div>
+
+    <table>
+        <thead>
+          <tr>
+            <th>Number</th>
+            <th>Title</th>
+            <th>Author</th>
+            <th>Creation Date</th>
+            <th>Views</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>1</td>
+            <td>Sample Post 1</td>
+            <td>John Doe</td>
+            <td>2022-04-15</td>
+            <td>100</td>
+          </tr>
+          <tr>
+            <td>2</td>
+            <td>Sample Post 2</td>
+            <td>Jane Smith</td>
+            <td>2022-04-16</td>
+            <td>85</td>
+          </tr>
+          <!-- Add more rows as needed -->
+        </tbody>
+      </table>
+    
+    <script>
+        
+        document.getElementById("inner-image").addEventListener("click", function() {
+            var $image = document.getElementById("inner-image");
+            $image.classList.add("animate");
+
+            // Remove the "animate" class after the animation ends
+            setTimeout(function() {
+                image.classList.remove("animate");
+            }, 500); // Adjust the duration to match the transition duration
+
+        });
+
+    </script>
+</body>
+</html>
